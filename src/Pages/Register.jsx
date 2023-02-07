@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory, Link } from 'react-router-dom'
-import './Register.css'
+import './auth.css'
 const Register = () => {
 
     const [credentials, setCredentials] = useState({ email: '', password: '', name: '', })

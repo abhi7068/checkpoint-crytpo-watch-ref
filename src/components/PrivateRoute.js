@@ -8,8 +8,7 @@ const PrivateRoute = ({ children, ...rest }) => {
 
         <Route {...rest}>
             {
-                credentials ? children : history.push('/login')
-
+                credentials ? history.push('/') : children
             }
         </Route>
 

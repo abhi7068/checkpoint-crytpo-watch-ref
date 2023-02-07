@@ -5,9 +5,10 @@ const PublicRoute = ({ children, ...rest }) => {
     const history = useHistory()
     return (
 
-        <Route {...rest}>
+          <Route {...rest}>
             {
-                credentials ? history.push('/') : children
+                credentials ? children : history.push('/login')
+
             }
         </Route>
 

@@ -8,8 +8,8 @@ import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 import CoinPage from './Pages/CoinPage';
 import Homepage from './Pages/Homepage';
-import LoginPage from './Pages/Login/LoginPage';
-import Register from './Pages/Register/Register';
+import LoginPage from './Pages/LoginPage';
+import Register from './Pages/Register';
 
 function App() {
   const CustomApp = styled('div')(({ theme }) => ({
@@ -23,10 +23,10 @@ function App() {
     <BrowserRouter>
       <CustomApp>
         <Header />
-        <PublicRoute exact path='/' component={Homepage} />
-        <PublicRoute path='/coins/:id' component={CoinPage} />
-        <PrivateRoute path='/login' component={LoginPage} />
-        <PrivateRoute path='/register' component={Register} />
+        <PrivateRoute exact path='/' component={Homepage} />
+        <PrivateRoute path='/coins/:id' component={CoinPage} />
+        <PublicRoute path='/login' component={LoginPage} />
+        <PublicRoute path='/register' component={Register} />
       </CustomApp>
     </BrowserRouter>
   );
